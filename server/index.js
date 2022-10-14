@@ -29,13 +29,14 @@ app.post("/api/post", (req, res)=>{
         }
     })
 })
-app.delete("/api/remove", (req, res)=>{
-    const {id} = req.params
+app.delete("/api/remove/:id", (req, res)=>{
+    console.log(req.body)
     const sqlRemove="DELETE FROM contact_db where id = ?";
-    db.query(sqlRemove,id,(error,results)=>{
+    db.query(sqlRemove,req.params.id,(error,results)=>{
         if(error){
-            console.log(error)
+           res.status(500).send(err) 
         }
+        else{res.status(200).json(results)}
     })
 })
 // app.get("/", (req,res)=>{
