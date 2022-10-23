@@ -20,6 +20,13 @@ app.get("/api/get", (req,res)=> {
         res.send(result)
     })
 })
+app.get("/api/get/:iduser", (req,res)=> {
+    const sqlGet ="select iduser from user where name = ? and password = ?";
+    db.query(sqlGet,req.params.id, (error, result)=> {
+        res.send(result)
+    })
+})
+
 app.post("/api/post", (req, res)=>{
     const {name,email,contact}= req.body;
     const sqlInsert="INSERT INTO contact_db (name, email, contact) VALUES (?,?,?)";

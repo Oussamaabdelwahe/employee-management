@@ -5,7 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import AddEdit from "./pages/AddEdit";
 import {store} from "./Store"
-import {Provider} from  'react-redux'
+import {Provider} from  'react-redux';
+import Authentification from "./pages/Authentification";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Provider store={store}>
         <ToastContainer position="top-center" />
        <Routes>
+       {/* <Route exact path="/"  index element={< Authentification  />} /> */}
           <Route exact path="/" element={<Home/>}/>
           <Route  path="/addContact" element={<AddEdit/>}/>
           <Route  path="/update/:id" element={<AddEdit/>}/>
