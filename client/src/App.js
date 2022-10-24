@@ -16,8 +16,8 @@ function App() {
         <Provider store={store}>
         <ToastContainer position="top-center" />
        <Routes>
-       {/* <Route exact path="/"  index element={< Authentification  />} /> */}
-          <Route exact path="/" element={<Home/>}/>
+       <Route exact path="/"  index element={< Authentification  />} />
+          <Route exact path="/home" element={<Home/>}/>
           <Route  path="/addContact" element={<AddEdit/>}/>
           <Route  path="/update/:id" element={<AddEdit/>}/>
         </Routes>
