@@ -5,13 +5,13 @@
 // const [info,setInfo]=useState({name:'',password:''})
 // const [id,setId]=useState([])
 // const navigate = useNavigate();
-// const navigateTodash = () => {
+// const navigates= () => {
     
 //     navigate('/home');
 //   };
 // const login=()=>{
 //     axios.post(`http://localhost:5000/api/get`,info).then((resp)=>{
-//         resp.data.length===0?alert('password or user name invalid '):localStorage.setItem('id',JSON.stringify(resp.data[0].id))}).then(()=>navigateTodash()).catch((err)=>{
+//         resp.data.length===0?alert('password or user name invalid '):localStorage.setItem('id',JSON.stringify(resp.data[0].id))}).then(()=>navigates()).catch((err)=>{
 //             console.log(err)
 //         })
 // }
